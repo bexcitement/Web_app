@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+    #about {
+        color: red;
+        font-family: "Comic Sans MS", cursive, sans-serif ;
+        font-size: 20px;
+ /*       text-align: center;*/
+    }
+    .recc {
+        color: purple;
+        font-family: Georgia;
+        font-size: 15px;
+       /* text-align: center;*/
+    }
+
+    #kitten {
+        border:10px solid FFFF00;
+            /*display:block;*/
+ /*           margin-right: auto;
+            margin-left: auto
+*/
+
+    }
+    </style>
+</head>
+<body>
+
+<a href="/"><img id="kitten" src="http://belarr.com/bakercat/bakercat.gif"></a>
+<ol id="about"> Student Grades:
+    {% set count = 1 %}
+    {% for rows in projects %}
+        <li class="recc"> Project {{count}}: {{rows}}</li>
+    {% set count = count + 1 %}
+    {% endfor %}
+
+<!--     <li class="recc">Grades: {{grade}} </li>
+ -->
+</ol>
+</body>
+</html>
